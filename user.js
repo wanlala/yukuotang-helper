@@ -57,7 +57,7 @@ function onPageLoad() {
         mutationsList.forEach(function(item,index){
             if (item.type == 'childList') {
                 for (let node of item.addedNodes) {
-                    if (node.querySelector('div.problem')) {
+                    if (node.querySelector('div.timeline_ppt.problem')) {
                         sendWxMessage(sendkey, `雨课堂-${document.title}有新习题`);
                     }
                 }
